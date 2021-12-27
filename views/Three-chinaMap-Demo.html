@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../ThreeLearnning/node_modules/vue/dist/vue.js"></script>
-    <script src="../ThreeLearnning/node_modules/three/build/three.js"></script>
-    <script src="../ThreeLearnning/node_modules/three/examples/js/controls/OrbitControls.js"></script>
-    <script src="../ThreeLearnning/node_modules/d3/dist/d3.js"></script>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/three/build/three.js"></script>
+    <script src="../node_modules/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="../node_modules/d3/dist/d3.js"></script>
     <style>
         #label{
             position: absolute;
@@ -247,7 +247,7 @@
                 // 设置 output 格式
                 loader.setResponseType('json')
 
-                loader.load('china.json', (data) => {
+                loader.load('../static/china.json', (data) => {
 
                     const jsondata = JSON.parse(JSON.stringify(data))
                     this.generateGeometry(jsondata)
